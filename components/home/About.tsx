@@ -10,13 +10,13 @@ export const AboutSection = ({}) => {
       <HStack gap={`72px`}>
         <Center
           aspectRatio={`556 / 591`}
-          h={`591px`}
-          w={`556px`}
+          h={`100%`}
           minW={`556px`}
           bg={`background.2`}
           borderRadius={`20px`}
           position={`relative`}
           overflow={`hidden`}
+          flex={`1`}
         >
           <Image
             src={`/images/tpa-about.jpg`}
@@ -25,7 +25,7 @@ export const AboutSection = ({}) => {
             style={{ objectFit: `cover` }}
           />
         </Center>
-        <VStack align={`stretch`} gap={`50px`}>
+        <VStack align={`stretch`} gap={`50px`} flex={`1`}>
           <Text textStyle={`paragraph`}>
             The Point Africa is a creative agency and talent hub connecting
             top-tier creatives with individuals, brands, and businesses across
