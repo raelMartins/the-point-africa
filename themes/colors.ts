@@ -1,48 +1,48 @@
 export const constant_colors = {
-  brand_color: '#A8DC66'
+  brand_color: { 1: '#EE7A5B' }
 };
 
 export const colors = {
   light: {
     theme_name: 'light',
-    background: { 1: `#F5F5F5`, 2: `#FFFFFF` },
-    text: { 1: '#000000', 2: '#191919' },
-    border_color: { 1: `#E4E4E7`, 2: `#D6D6D6` },
-    form: { label: `#A3A3A3`, color: `#292929` }
+    background: { 1: '#F8F8F8', 2: '#E0E0E0' },
+    text: { 1: '#121212', 2: '#1f1f1f' },
+    border_color: { 1: '#E4E4E7', 2: '#D6D6D6' },
+    form: { label: '#A3A3A3', color: '#292929' }
   },
   dark: {
     theme_name: 'dark',
-    background: { 1: `#232425`, 2: `#2C2C2C` },
+    background: { 1: '#232425', 2: '#2C2C2C' },
     text: { 1: '#FFFFFF', 2: '#DDDDDD' },
-    border_color: { 1: `#5e5e5e`, 2: `#6f6f6f` },
-    form: { label: `#FAFAFAE5`, color: `#ffffff` }
+    border_color: { 1: '#5e5e5e', 2: '#6f6f6f' },
+    form: { label: '#FAFAFAE5', color: '#ffffff' }
   },
   darkGreen: {
     theme_name: 'darkGreen',
-    background: { 1: `#111B21`, 2: `#202C33` },
+    background: { 1: '#111B21', 2: '#202C33' },
     text: { 1: '#FFFFFF', 2: '#DDDDDD' },
-    border_color: { 1: `#2C3B44`, 2: `#3D4C55` },
-    form: { label: `#A6A6A6`, color: `#ffffff` }
+    border_color: { 1: '#2C3B44', 2: '#3D4C55' },
+    form: { label: '#A6A6A6', color: '#ffffff' }
   },
   darkBlue: {
     theme_name: 'darkBlue',
-    background: { 1: `#15151E`, 2: `#1C1C2A` },
+    background: { 1: '#15151E', 2: '#1C1C2A' },
     text: { 1: '#FFFFFF', 2: '#DDDDDD' },
-    border_color: { 1: `#2f3652`, 2: `#171a26` },
-    form: { label: `#A6A6A6`, color: `#ffffff` }
+    border_color: { 1: '#2f3652', 2: '#171a26' },
+    form: { label: '#A6A6A6', color: '#ffffff' }
   },
   default: {
     theme_name: 'light',
-    background: { 1: `#F5F5F5`, 2: `#FFFFFF` },
+    background: { 1: '#F5F5F5', 2: '#FFFFFF' },
     text: { 1: '#000000', 2: '#191919' },
-    border_color: { 1: `#E4E4E7`, 2: `#D6D6D6` },
-    form: { label: `#A3A3A3`, color: `#292929` }
+    border_color: { 1: '#E4E4E7', 2: '#D6D6D6' },
+    form: { label: '#A3A3A3', color: '#292929' }
   }
 };
 
 export const get_color_pop = (hex: string, background: string) => {
   //hex color
-  const hex_string = hex.replace(`#`, ``);
+  const hex_string = hex.replace('#', '');
   const hexcolor =
     hex_string?.length === 3
       ? `${hex_string[0]}${hex_string[0]}${hex_string[1]}${hex_string[1]}${hex_string[2]}${hex_string[2]}`
@@ -54,7 +54,7 @@ export const get_color_pop = (hex: string, background: string) => {
   const yiq1 = (r1 * 299 + g1 * 587 + b1 * 114) / 1000;
 
   //background
-  const backgroundHex = background.replace(`#`, ``);
+  const backgroundHex = background.replace('#', '');
   const backgroundColor =
     backgroundHex?.length === 3
       ? `${backgroundHex[0]}${backgroundHex[0]}${backgroundHex[1]}${backgroundHex[1]}${backgroundHex[2]}${backgroundHex[2]}`
@@ -79,7 +79,7 @@ function addAlpha(color: string, opacity: number) {
 }
 
 export const get_hex_color_complements = (hex: string, theme: string) => {
-  const hex_string = hex.replace(`#`, ``);
+  const hex_string = hex.replace('#', '');
   const hexcolor =
     hex_string?.length === 3
       ? `${hex_string[0]}${hex_string[0]}${hex_string[1]}${hex_string[1]}${hex_string[2]}${hex_string[2]}`
@@ -92,18 +92,18 @@ export const get_hex_color_complements = (hex: string, theme: string) => {
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
   const color_pop =
-    yiq >= 183 && theme === `light`
+    yiq >= 183 && theme === 'light'
       ? '#191919'
-      : yiq < 100 && theme !== `light`
+      : yiq < 100 && theme !== 'light'
       ? '#ffffff'
       : hex;
 
   const background =
-    theme === `light` && yiq >= 200
+    theme === 'light' && yiq >= 200
       ? `#${addAlpha('191919', 1)}`
-      : theme !== `light` && yiq <= 100
+      : theme !== 'light' && yiq <= 100
       ? `#${addAlpha('ffffff', 1)}`
-      : `transparent`;
+      : 'transparent';
 
   return {
     primary: hex,
@@ -113,8 +113,8 @@ export const get_hex_color_complements = (hex: string, theme: string) => {
       contrast: yiq >= 128 ? '#191919' : '#ffffff',
       accent: yiq >= 128 ? '#ffffff' : '#191919',
       background,
-      dark_background_pop: yiq >= 128 ? hex : `#FFFFFF`,
-      light_background_pop: yiq >= 128 ? `#191919` : hex,
+      dark_background_pop: yiq >= 128 ? hex : '#FFFFFF',
+      light_background_pop: yiq >= 128 ? '#191919' : hex,
       opacity: {
         _05: `${hex}0D`,
         _10: `${hex}1A`,
@@ -141,9 +141,9 @@ export const get_hex_color_complements = (hex: string, theme: string) => {
       },
       color_pop,
       contrast_pop:
-        color_pop === `#ffffff`
+        color_pop === '#ffffff'
           ? '#191919'
-          : color_pop === `#191919`
+          : color_pop === '#191919'
           ? '#ffffff'
           : yiq >= 183
           ? '#191919'

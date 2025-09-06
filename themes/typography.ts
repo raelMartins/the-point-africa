@@ -1,56 +1,25 @@
 export const textStyles = {
   heading: {
     fontFamily: 'var(--font_manrope)',
-    fontSize: '48px',
-    fontWeight: '600',
-    letterSpacing: '1.6px',
-    color: 'var(--chakra-colors-text.1)'
+    fontWeight: `700`,
+    fontSize: `50px`,
+    lineHeight: `120%`,
+    letterSpacing: `0%`,
+    color: `brand_color.1`
   },
-  subHeading: {
+  heading_2: {
     fontFamily: 'var(--font_manrope)',
-    fontSize: '20px',
-    fontWeight: '700',
-    letterSpacing: '1px'
+    fontWeight: `700`,
+    fontSize: `40px`,
+    lineHeight: `120%`,
+    letterSpacing: `0%`,
+    color: `brand_color.1`
   },
-  descText: {
+  paragraph: {
     fontFamily: 'var(--font_manrope)',
-    fontSize: '16px',
-    fontWeight: '300',
-    letterSpacing: '0.8px'
-  },
-  labelText: {
-    fontSize: '13px',
-    fontWeight: '500',
-    lineHeight: '150%',
-    letterSpacing: '2%',
-    color: 'Grey.Dark3'
-  },
-  labelTextLight: {
-    fontSize: '13px',
-    fontWeight: '400',
-    lineHeight: '150%',
-    letterSpacing: '2%',
-    color: 'Grey.Light4'
-  },
-
-  bodyMed: {
-    fontSize: '16px',
-    fontWeight: '500',
-    lineHeight: '140%',
-    letterSpacing: '1%',
-    color: 'Darkest'
-  },
-  bodyReg: {
-    fontSize: '16px',
-    fontWeight: '400',
-    lineHeight: '140%',
-    letterSpacing: '1%',
-    color: 'Grey.Dark5'
-  },
-  infoText: {
-    fontFamily: 'var(--font_manrope)',
-    fontSize: '16px',
-    fontWeight: '400',
-    letterSpacing: '0.8px'
+    fontWeight: `400`,
+    fontSize: `24px`,
+    lineHeight: `120%`,
+    letterSpacing: `0%`
   }
 };
