@@ -1,12 +1,28 @@
-import { Center, Heading, HStack, Stack, Text, VStack } from '@chakra-ui/react';
+import {
+  Center,
+  Divider,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  VStack
+} from '@chakra-ui/react';
 import Image from 'next/image';
 
 export const AboutSection = ({}) => {
   return (
-    <Stack p={`72px 100px`} gap={`66px`}>
-      <Heading textStyle={`heading_2`} textAlign={`center`}>
-        About
-      </Heading>
+    <VStack p={`72px 100px`} gap={`66px`}>
+      <Stack w={`max-content`} align={`center`}>
+        <Heading textStyle={`heading_2`} textAlign={`center`}>
+          About
+        </Heading>
+        <Divider
+          w={`70%`}
+          borderColor={`text.1`}
+          border={`1.5px solid`}
+          borderRadius={`1px`}
+        />
+      </Stack>
       <HStack gap={`72px`}>
         <Center
           aspectRatio={`556 / 591`}
@@ -42,6 +58,6 @@ export const AboutSection = ({}) => {
           </Text>
         </VStack>
       </HStack>
-    </Stack>
+    </VStack>
   );
 };
