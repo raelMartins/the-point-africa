@@ -3,7 +3,12 @@ import Image from 'next/image';
 
 export const WhatWeDo = ({}) => {
   return (
-    <Box p={`72px 100px`} position={`relative`} minH={`610px`}>
+    <Box
+      p={`72px 100px`}
+      position={`relative`}
+      minH={`610px`}
+      id={`what-we-do`}
+    >
       <Image
         src={`/images/tpa-what-we-do.jpg`}
         alt=''

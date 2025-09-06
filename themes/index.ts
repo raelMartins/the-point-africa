@@ -7,10 +7,12 @@ export const theme = extendTheme({
   styles: {
     global: {
       'html, body': {
-        background: 'background.1'
+        background: 'background.1',
+        scrollBehaviour: `smooth !important`
       },
       body: {
-        fontFamily: 'var(--font-euclid-circular-b)'
+        fontFamily: 'var(--font-euclid-circular-b)',
+        scrollBehaviour: `smooth !important`
       }
     }
   },

@@ -4,6 +4,7 @@ import { AboutSection } from '../home/About';
 import { WhatWeDo } from '../home/WhatWeDo';
 import { WhyChooseUs } from '../home/WhyChooseUs';
 import { TalentRoster } from '../home/TalentRoster';
+import { HomeNavbar } from '../layout/HomeNavbar';
 
 export const HomePageComponent = () => {
   return (
@@ -14,7 +15,17 @@ export const HomePageComponent = () => {
         h={`945px`}
         overflow={`hidden`}
         w={`100%`}
+        id='home'
       >
+        <Box
+          position={`absolute`}
+          top={`0px`}
+          left={`0px`}
+          right={`0px`}
+          zIndex={`1`}
+        >
+          <HomeNavbar />
+        </Box>
         <Image
           src={`/images/home_hero.jpg`}
           alt='Hero'

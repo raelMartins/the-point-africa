@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export const AboutSection = ({}) => {
   return (
-    <VStack p={`72px 100px`} gap={`66px`}>
+    <VStack p={`72px 100px`} gap={`66px`} id={`about`}>
       <Stack w={`max-content`} align={`center`}>
         <Heading textStyle={`heading_2`} textAlign={`center`}>
           About
