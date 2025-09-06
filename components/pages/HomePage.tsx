@@ -1,6 +1,9 @@
 import { Box, Center, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { AboutSection } from '../home/About';
+import { WhatWeDo } from '../home/WhatWeDo';
+import { WhyChooseUs } from '../home/WhyChooseUs';
+import { TalentRoster } from '../home/TalentRoster';
 
 export const HomePageComponent = () => {
   return (
@@ -42,6 +45,9 @@ export const HomePageComponent = () => {
         </Stack>
       </Center>
       <AboutSection />
+      <WhatWeDo />
+      <WhyChooseUs />
+      <TalentRoster />
     </Box>
   );
 };

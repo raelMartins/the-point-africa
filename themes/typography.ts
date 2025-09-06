@@ -21,5 +21,12 @@ export const textStyles = {
     fontSize: `24px`,
     lineHeight: `120%`,
     letterSpacing: `0%`
+  },
+  paragraph_2: {
+    fontFamily: 'var(--font_manrope)',
+    fontWeight: `500`,
+    fontSize: `27px`,
+    lineHeight: `120%`,
+    letterSpacing: `0%`
   }
 };
