@@ -52,7 +52,7 @@ export const TalentRoster = ({}) => {
               gap={`33px`}
               bg={i == -0 ? `brand_color.1` : `background.2`}
               borderRadius={`20px`}
-              p={`10px`}
+              p={`20px`}
               alignItems={`center`}
               justifyContent={`center`}
               minH={`130px`}
@@ -62,6 +62,7 @@ export const TalentRoster = ({}) => {
                 textStyle={`paragraph`}
                 fontWeight={`600`}
                 fontSize={`25px`}
+                textAlign={`center`}
               >
                 {item}
               </Text>
