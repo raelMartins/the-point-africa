@@ -8,7 +8,7 @@ export const WhatWeDo = ({}) => {
         src={`/images/tpa-what-we-do.jpg`}
         alt=''
         fill
-        style={{ objectFit: `cover` }}
+        style={{ objectFit: `cover`, opacity: `.7` }}
       />
       <VStack
         gap={`77px`}
