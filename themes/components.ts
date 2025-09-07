@@ -35,26 +35,27 @@ export const components = {
     variants: {
       primary: {
         h: 'max-content',
+        borderRadius: `10px`,
         w: 'fit-content',
-        fontSize: '16px',
+        fontSize: '22px',
         fontWeight: '600',
-        color: 'Grey.0',
-        bg: 'brand_color',
+        color: 'text.1',
+        bg: 'brand_color.1',
         rounded: 'full',
-        lineHeight: '100%',
+        lineHeight: '120%',
         letterSpacing: `0%`,
         iconSpacing: '8px',
-        p: '13px 16px',
+        p: '16px 30px',
         border: '1px solid',
         borderColor: 'transparent',
         transition: '.5s',
         _hover: {
-          bg: 'brand_color',
+          bg: 'brand_color.1',
           opacity: 1,
           transform: `translate(3px, 3px)`
         },
         _active: {
-          bg: 'brand_color',
+          bg: 'brand_color.1',
           opacity: 1,
           transform: `translate(3px, 3px)`
         },
@@ -67,7 +68,7 @@ export const components = {
         fontSize: '16px',
         fontWeight: '600',
         color: 'Grey.0',
-        bg: 'brand_color',
+        bg: 'brand_color.1',
         rounded: 'full',
         lineHeight: '100%',
         letterSpacing: `0%`,
@@ -77,12 +78,12 @@ export const components = {
         borderColor: '#FFFFFF80',
         transition: '.5s',
         _hover: {
-          bg: 'brand_color',
+          bg: 'brand_color.1',
           opacity: 1,
           transform: `translate(3px, 3px)`
         },
         _active: {
-          bg: 'brand_color',
+          bg: 'brand_color.1',
           opacity: 1,
           transform: `translate(3px, 3px)`
         },

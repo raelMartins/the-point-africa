@@ -33,6 +33,7 @@ export const HomeNavbar = () => {
       </HStack>
       <Center>
         <Button
+          variant={`primary`}
           bg={`brand_color.1`}
           fontWeight={`600`}
           fontSize={`22px`}

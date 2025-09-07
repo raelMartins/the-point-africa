@@ -18,6 +18,8 @@ const MotionGridItem = motion.create(GridItem);
 
 export const OurProjectsSection = ({}) => {
   const [imageURL, setImageURL] = useState<string | null>(null);
+  const [hoverTitle, setHoverTitle] = useState(false);
+
   const grid_images = Array.from(
     [1, 2, 3, 4, 5, 6, 7],
     (x) => `/images/projects/tpa-project-${x}.${x == 1 ? `png` : `jpg`}`
@@ -42,11 +44,13 @@ export const OurProjectsSection = ({}) => {
             align={`center`}
             gap={`15px`}
             textAlign={`center`}
+            onMouseEnter={() => setHoverTitle(true)}
+            onMouseLeave={() => setHoverTitle(false)}
           >
             <Heading textStyle={`heading`}>Our Projects</Heading>
             <Divider
-              w={`70%`}
-              borderColor={`text.1`}
+            w={hoverTitle ? `100%` : `70%`}
+            transition={`.3s`}              borderColor={`text.1`}
               border={`1.5px solid`}
               borderRadius={`1px`}
               my={`0px !important`}

@@ -1,3 +1,4 @@
+'use client';
 import {
   Box,
   Divider,
@@ -8,8 +9,10 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react';
+import { useState } from 'react';
 
 export const WhyChooseUs = ({}) => {
+  const [hoverTitle, setHoverTitle] = useState(false);
   return (
     <Box p={`72px 100px`} position={`relative`} minH={`610px`}>
       <VStack gap={`77px`} position={`relative`} zIndex={`1`} mx={`auto`}>
@@ -18,6 +21,8 @@ export const WhyChooseUs = ({}) => {
           align={`center`}
           gap={`15px`}
           textAlign={`center`}
+          onMouseEnter={() => setHoverTitle(true)}
+          onMouseLeave={() => setHoverTitle(false)}
         >
           <Heading textStyle={`heading_2`}>
             <Box as='span' color={`text.1`}>
@@ -29,7 +34,8 @@ export const WhyChooseUs = ({}) => {
             </Box>
           </Heading>
           <Divider
-            w={`70%`}
+            w={hoverTitle ? `100%` : `70%`}
+            transition={`.3s`}
             borderColor={`text.1`}
             border={`1.5px solid`}
             borderRadius={`1px`}
@@ -48,6 +54,8 @@ export const WhyChooseUs = ({}) => {
             bg={`background.2`}
             borderRadius={`20px`}
             p={`40px 50px`}
+            _hover={{ transform: `translate(5px, 5px)` }}
+            transition={`.3s`}
           >
             <Text textStyle={`paragraph`} fontWeight={`700`} fontSize={`25px`}>
               Centralised Talent Pool
@@ -64,6 +72,8 @@ export const WhyChooseUs = ({}) => {
             bg={`background.2`}
             borderRadius={`20px`}
             p={`40px 50px`}
+            _hover={{ transform: `translate(-5px, 5px)` }}
+            transition={`.3s`}
           >
             <Text textStyle={`paragraph`} fontWeight={`700`} fontSize={`25px`}>
               Creative Curation{' '}
@@ -82,6 +92,8 @@ export const WhyChooseUs = ({}) => {
             p={`40px 50px`}
             rowSpan={2}
             justifyContent={`center`}
+            _hover={{ transform: `translate(-8px, 0px)` }}
+            transition={`.3s`}
           >
             <Text
               textStyle={`paragraph`}
@@ -104,6 +116,8 @@ export const WhyChooseUs = ({}) => {
             bg={`background.2`}
             borderRadius={`20px`}
             p={`40px 50px`}
+            _hover={{ transform: `translate(5px, -5px)` }}
+            transition={`.3s`}
           >
             <Text textStyle={`paragraph`} fontWeight={`700`} fontSize={`25px`}>
               Transparent Pricing with Agency Fee{' '}
@@ -120,6 +134,8 @@ export const WhyChooseUs = ({}) => {
             bg={`background.2`}
             borderRadius={`20px`}
             p={`40px 50px`}
+            _hover={{ transform: `translate(-5px, -5px)` }}
+            transition={`.3s`}
           >
             <Text textStyle={`paragraph`} fontWeight={`700`} fontSize={`25px`}>
               Ongoing Relationships{' '}

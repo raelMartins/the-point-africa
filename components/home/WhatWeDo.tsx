@@ -1,7 +1,12 @@
+'use client';
+
 import { Box, Divider, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export const WhatWeDo = ({}) => {
+  const [hoverTitle, setHoverTitle] = useState(false);
+
   return (
     <Box
       p={`72px 100px`}
@@ -23,10 +28,17 @@ export const WhatWeDo = ({}) => {
         mx={`auto`}
         textAlign={`center`}
       >
-        <Stack w={`max-content`} align={`center`} gap={`15px`}>
+        <Stack
+          w={`max-content`}
+          align={`center`}
+          gap={`15px`}
+          onMouseEnter={() => setHoverTitle(true)}
+          onMouseLeave={() => setHoverTitle(false)}
+        >
           <Heading textStyle={`heading_2`}>What We Do</Heading>
           <Divider
-            w={`70%`}
+            w={hoverTitle ? `100%` : `70%`}
+            transition={`.3s`}
             borderColor={`text.1`}
             border={`1.5px solid`}
             borderRadius={`1px`}

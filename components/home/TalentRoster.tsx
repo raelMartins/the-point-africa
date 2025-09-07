@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Divider,
@@ -8,8 +10,11 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react';
+import { useState } from 'react';
 
 export const TalentRoster = ({}) => {
+  const [hoverTitle, setHoverTitle] = useState(false);
+
   const roster = [
     `Content Creators`,
     `Photographers`,
@@ -33,11 +38,13 @@ export const TalentRoster = ({}) => {
           align={`center`}
           gap={`15px`}
           textAlign={`center`}
+          onMouseEnter={() => setHoverTitle(true)}
+          onMouseLeave={() => setHoverTitle(false)}
         >
           <Heading textStyle={`heading_2`}>Our Creative Talent Roster</Heading>
           <Divider
-            w={`70%`}
-            borderColor={`text.1`}
+            w={hoverTitle ? `100%` : `70%`}
+            transition={`.3s`}            borderColor={`text.1`}
             border={`1.5px solid`}
             borderRadius={`1px`}
             my={`0px !important`}
@@ -57,6 +64,8 @@ export const TalentRoster = ({}) => {
               justifyContent={`center`}
               minH={`130px`}
               cursor={`pointer`}
+              _hover={{ color: `#fff`, bg: `brand_color.1` }}
+              transition={`.3s`}
             >
               <Text
                 textStyle={`paragraph`}
