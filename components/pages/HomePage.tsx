@@ -5,6 +5,7 @@ import { WhatWeDo } from '../home/WhatWeDo';
 import { WhyChooseUs } from '../home/WhyChooseUs';
 import { TalentRoster } from '../home/TalentRoster';
 import { HomeNavbar } from '../layout/HomeNavbar';
+import { OurProjectsSection } from '../home/OurProjects';
 
 export const HomePageComponent = () => {
   return (
@@ -56,6 +57,7 @@ export const HomePageComponent = () => {
         </Stack>
       </Center>
       <AboutSection />
+      <OurProjectsSection />
       <WhatWeDo />
       <WhyChooseUs />
       <TalentRoster />
