@@ -8,6 +8,7 @@ export const theme = extendTheme({
     global: {
       'html, body': {
         background: 'background.1',
+        color: 'text.1',
         scrollBehaviour: `smooth !important`
       },
       body: {
