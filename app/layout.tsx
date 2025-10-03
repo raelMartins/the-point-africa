@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import { Providers } from '@/app/providers';
-import { manrope } from '@/themes/fonts';
+import { manrope, playfair_display } from '@/themes/fonts';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://the-point-africa.vercel.app'),
@@ -30,7 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.variable} ${manrope.className}`}
+        className={`${manrope.variable} ${playfair_display.variable} ${manrope.className}`}
         style={{ maxWidth: `2000px`, margin: `0 auto`, overflowX: `clip` }}
       >
         <Providers>{children}</Providers>

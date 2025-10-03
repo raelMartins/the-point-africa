@@ -6,6 +6,7 @@ import { WhyChooseUs } from '../home/WhyChooseUs';
 import { TalentRoster } from '../home/TalentRoster';
 import { HomeNavbar } from '../layout/HomeNavbar';
 import { OurProjectsSection } from '../home/OurProjects';
+import { HomeFooter } from '../layout/HomeFooter';
 
 export const HomePageComponent = () => {
   return (
@@ -61,6 +62,7 @@ export const HomePageComponent = () => {
       <WhatWeDo />
       <WhyChooseUs />
       <TalentRoster />
+      <HomeFooter />
     </Box>
   );
 };
