@@ -8,6 +8,7 @@ import { HomeNavbar } from '../layout/HomeNavbar';
 import { OurProjectsSection } from '../home/OurProjects';
 import { HomeFooter } from '../layout/HomeFooter';
 import { PreferableClients } from '../home/PreferableClients';
+import { FAQs } from '../home/FAQs';
 
 export const HomePageComponent = () => {
   return (
@@ -64,6 +65,7 @@ export const HomePageComponent = () => {
       <WhyChooseUs />
       <TalentRoster />
       <PreferableClients />
+      <FAQs />
       <HomeFooter />
     </Box>
   );
