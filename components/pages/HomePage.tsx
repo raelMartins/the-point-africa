@@ -10,6 +10,7 @@ import { HomeFooter } from '../layout/HomeFooter';
 import { PreferableClients } from '../home/PreferableClients';
 import { FAQs } from '../home/FAQs';
 import { TargetAudience } from '../home/TargetAudience';
+import { BecomeMember } from '../home/BecomeMember';
 
 export const HomePageComponent = () => {
   return (
@@ -68,6 +69,7 @@ export const HomePageComponent = () => {
       <TargetAudience />
       <PreferableClients />
       <FAQs />
+      <BecomeMember />
       <HomeFooter />
     </Box>
   );
