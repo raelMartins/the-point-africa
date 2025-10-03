@@ -9,6 +9,7 @@ import { OurProjectsSection } from '../home/OurProjects';
 import { HomeFooter } from '../layout/HomeFooter';
 import { PreferableClients } from '../home/PreferableClients';
 import { FAQs } from '../home/FAQs';
+import { TargetAudience } from '../home/TargetAudience';
 
 export const HomePageComponent = () => {
   return (
@@ -64,6 +65,7 @@ export const HomePageComponent = () => {
       <WhatWeDo />
       <WhyChooseUs />
       <TalentRoster />
+      <TargetAudience />
       <PreferableClients />
       <FAQs />
       <HomeFooter />
